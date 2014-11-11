@@ -52,6 +52,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Supplies.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supplies.Designer.cs">
+      <DependentUpon>Supplies.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserAdd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +76,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Supplies.resx">
+      <DependentUpon>Supplies.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserAdd.resx">
       <DependentUpon>UserAdd.cs</DependentUpon>
     </EmbeddedResource>
