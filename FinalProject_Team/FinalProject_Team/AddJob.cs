@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace FinalProject_Team
 {
-    public partial class Form1 : Form
+    public partial class AddJob : Form
     {
-        public Form1()
+        public AddJob()
         {
             InitializeComponent();
         }

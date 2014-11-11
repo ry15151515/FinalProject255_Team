@@ -1,6 +1,6 @@
 ﻿namespace FinalProject_Team
 {
-    partial class Form1
+    partial class AddJob
     {
         /// <summary>
         /// Required designer variable.
@@ -118,7 +118,7 @@
             // 
             // txtDurHr
             // 
-            this.txtDurHr.Location = new System.Drawing.Point(124, 147);
+            this.txtDurHr.Location = new System.Drawing.Point(131, 147);
             this.txtDurHr.Name = "txtDurHr";
             this.txtDurHr.Size = new System.Drawing.Size(34, 20);
             this.txtDurHr.TabIndex = 25;
@@ -160,7 +160,7 @@
             // 
             // txtDurMin
             // 
-            this.txtDurMin.Location = new System.Drawing.Point(189, 147);
+            this.txtDurMin.Location = new System.Drawing.Point(206, 146);
             this.txtDurMin.Name = "txtDurMin";
             this.txtDurMin.Size = new System.Drawing.Size(34, 20);
             this.txtDurMin.TabIndex = 36;
@@ -177,7 +177,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(158, 151);
+            this.label11.Location = new System.Drawing.Point(165, 151);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(35, 13);
             this.label11.TabIndex = 38;
@@ -242,7 +242,7 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(219, 20);
             this.dateTimePicker1.TabIndex = 46;
             // 
-            // Form1
+            // AddJob
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -270,8 +270,8 @@
             this.Controls.Add(this.txtColor);
             this.Controls.Add(this.txtJobSource);
             this.Controls.Add(this.txtJobName);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "AddJob";
+            this.Text = "Add Job";
             this.ResumeLayout(false);
             this.PerformLayout();
 
