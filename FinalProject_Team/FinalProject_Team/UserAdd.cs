@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace FinalProject_Team
 {
-    public partial class Form1 : Form
+    public partial class UserAdd : Form
     {
-        public Form1()
+        public UserAdd()
         {
             InitializeComponent();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
