@@ -20,31 +20,31 @@ namespace FinalProject_Team
         private void btn_Maintenance_Info_Click(object sender, EventArgs e)
         {
             Form maintenance = new Maintenance();
-            maintenance.Show();
+            maintenance.ShowDialog();
         }
 
         private void btnPrinterUse_Click(object sender, EventArgs e)
         {
             Form printer = new PrinterUse();
-            printer.Show();
+            printer.ShowDialog();
         }
 
         private void btnSupplies_Click(object sender, EventArgs e)
         {
             Form supplies = new Supplies();
-            supplies.Show();
+            supplies.ShowDialog();
         }
 
         private void btnAddJob_Click(object sender, EventArgs e)
         {
             Form job = new AddJob();
-            job.Show();
+            job.ShowDialog();
         }
 
         private void btnAddUser_Click(object sender, EventArgs e)
         {
             Form user = new UserAdd();
-            user.Show();
+            user.ShowDialog();
         }
 
         private void MainMenu_Load(object sender, EventArgs e)
