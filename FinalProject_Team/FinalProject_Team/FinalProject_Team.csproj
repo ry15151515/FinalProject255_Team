@@ -50,6 +50,7 @@
     <Compile Include="AddJob.Designer.cs">
       <DependentUpon>AddJob.cs</DependentUpon>
     </Compile>
+    <Compile Include="clsUser.cs" />
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
