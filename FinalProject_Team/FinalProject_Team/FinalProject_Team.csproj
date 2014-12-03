@@ -52,6 +52,8 @@
     </Compile>
     <Compile Include="clsUser.cs" />
     <Compile Include="clsUserInfo.cs" />
+    <Compile Include="clsComboBoxItem.cs" />
+    <Compile Include="clsMaintenance.cs" />
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
