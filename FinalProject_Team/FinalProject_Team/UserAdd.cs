@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Collections;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,141 +12,166 @@ using System.Windows.Forms;
 
 namespace FinalProject_Team
 {
-
-    // Form written by Tyler Philbrick
-
     public partial class UserAdd : Form
     {
-
-        private List<clsUser> mUsers = new List<clsUser>();
-
         public UserAdd()
         {
             InitializeComponent();
-            loadExampleData();
-            displayData();
         }
+
+
+        //Not Sure if Needed...
+
+        //Class Scopes
+        private ArrayList mStudents = new ArrayList();
         
-        private void loadExampleData()
+
+        private void label1_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < 10; i++)
-            {
-                mUsers.Add(new clsUser("Tyler", "Philbrick", "Technology",
-                    "CIT", "Toys", "Student", DateTime.Now, "t5@purdue.edu", false));
-            }
+
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            clsUser tmp = checkedNewUser();
-            if (tmp == null)
-                return;
-            mUsers.Add(tmp);
-            displayData();
-        }
-
-        private void displayData()
-        {
-            lstOutput.Items.Clear();
-            lstOutput.Items.Add(
-                "Name                " +
-                "College        " +
-                "Major     " +
-                "Interest       " +
-                "Status         " +
-                "Birthday       " +
-                "Email          " +
-                "Gender"
-            );
-            foreach (clsUser tmp in mUsers)
-            {
-                lstOutput.Items.Add(tmp.ToString());
-            }
-        }
-
-        private void lstOutput_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (lstOutput.SelectedIndex < 1)
-            {
-                return;
-            }
-            clsUser tmp = mUsers[lstOutput.SelectedIndex - 1];
-            txtFName.Text = tmp.FName;
-            txtLName.Text = tmp.LName;
-            txtCollege.Text = tmp.College;
-            txtMajor.Text = tmp.Major;
-            txtInterest.Text = tmp.Interest;
-            txtStatus.Text = tmp.Status;
-            dtpBirthday.Value = tmp.Birthday;
-            txtPhone.Text = tmp.Phone;
-            txtEmail.Text = tmp.Email;
-            if (tmp.Gender)
-            {
-                rdoFemale.Checked = true;
-                rdoMale.Checked = false;
-            }
-            else
-            {
-                rdoFemale.Checked = false;
-                rdoMale.Checked = true;
-            }
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if (lstOutput.SelectedIndex < 1)
-            {
-                Utility.ShowMessage("Please select a user before clicking Edit User");
-                return;
-            }
-            clsUser tmp = checkedNewUser();
-            if (tmp == null)
-                return;
-            mUsers[lstOutput.SelectedIndex - 1] = tmp;
-            displayData();
-        }
-
-        private clsUser checkedNewUser()
-        {
-            string fname, lname, college, major;
-            string interest, status, phone, email;
+            string firstName = "";
+            string lastName = "";
+            string college = "";
+            string major = "";
+            string pInterest = "";
+            string status = "";
             DateTime birthdate;
-            bool gender;
-            if (!(
-                Utility.validateInput(txtFName, out fname) &&
-                Utility.validateInput(txtLName, out lname) &&
-                Utility.validateInput(txtCollege, out college) &&
-                Utility.validateInput(txtMajor, out major) &&
-                Utility.validateInput(txtInterest, out interest) &&
-                Utility.validateInput(txtStatus, out status) &&
-                Utility.validateInput(txtEmail, out email)
-            ))
-            {
-                return null;
-            }
-            birthdate = dtpBirthday.Value;
-            phone = txtPhone.Text;
-            if (!(rdoMale.Checked || rdoMale.Checked))
-            {
-                Utility.ShowMessage("You must select Male or Female");
-                return null;
-            }
-            gender = rdoFemale.Checked;
-            clsUser tmp = new clsUser(fname, lname, college, major, interest,
-                status, birthdate, email, gender);
-            return tmp;
-        }
+            string phone = "";
+            string email = "";
+            string gender = "";
 
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-            if (lstOutput.SelectedIndex < 1)
+            //Min-Max DateTime's
+            DateTime maxDate = DateTime.Now;
+            DateTime minDate = new DateTime(1900,1,1);
+
+            //Assigns DateTimePicker to TextBox to be validated 
+            txtbirthdate.Text = dateBirthdate.Value.ToShortDateString();
+
+            //========VALIDATIONS==========
+                //First Name
+            if (Utility.validateInput(txtfirstName,out firstName) == false)
             {
-                Utility.ShowMessage("Please select a record before deleting");
                 return;
             }
-            mUsers.RemoveAt(lstOutput.SelectedIndex - 1);
-            displayData();
+                //Last Name
+            if (Utility.validateInput(txtlastName, out lastName) == false)
+            {
+                return;
+            }
+                //College
+            if (Utility.validateInput(txtcollege, out college) == false)
+            {
+                return;
+            }
+                //Major
+            if (Utility.validateInput(txtmajor, out major) == false)
+            {
+                return;
+            }
+                //Primary Interest
+            if (Utility.validateInput(txtprimaryInterest, out pInterest) == false)
+            {
+                return;
+            }
+                //Status
+            if (Utility.validateInput(txtstatus, out status) == false)
+            {
+                return;
+            }
+                //Birthdate
+            if (Utility.validateInput(txtbirthdate,(DateTime) minDate,(DateTime)maxDate,out birthdate) == false)
+            {
+                return;
+            }
+                //Phone Number
+            if (Utility.validateInput(txtphone,out phone) == false)
+            {
+                return;
+            }
+                //E-mail
+            if (Utility.validateInput(txtemail,out email) == false)
+            {
+                return;
+            }
+
+            //Radio Buttons
+            if (rdbMale.Checked == false && rdbFemale.Checked == false)
+            {
+                Utility.ShowMessage("Please Select Your Gender");
+                return;
+            }
+            if (rdbMale.Checked == true)
+            {
+                gender = "Male";
+            }
+            if (rdbFemale.Checked == true)
+            {
+                gender = "Female";
+            }
+            //********END VALIDATION************
+
+
+
+            //***Add Student to ArrayList***
+            clsUserInfo temp = new clsUserInfo(firstName, lastName, college, major, pInterest, status, birthdate, phone, email,gender);
+            mStudents.Add(temp);
+
+
+
+            eraseInputFields();
+            Utility.ShowMessage("User " + firstName + " " + lastName + " Successfully Added!");
         }
 
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rdbMale_CheckedChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void rdbFemale_CheckedChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void rdbMale_Click(object sender, EventArgs e)
+        {
+            rdbFemale.Checked = false;
+        }
+
+        private void rdbFemale_Click(object sender, EventArgs e)
+        {
+            rdbMale.Checked = false;
+        }
+
+        private void eraseInputFields()
+        {
+            txtfirstName.Text = "";
+            txtlastName.Text = "";
+            txtcollege.Text = "";
+            txtmajor.Text = "";
+            txtprimaryInterest.Text = "";
+            txtstatus.Text = "";
+            dateBirthdate.ResetText();
+            txtphone.Text = "";
+            txtemail.Text = "";
+            rdbFemale.Checked = false;
+            rdbMale.Checked = false;
+        }
+
+        private void btnReturn_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
