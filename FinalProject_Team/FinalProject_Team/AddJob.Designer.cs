@@ -216,6 +216,7 @@
             this.btnAdd.TabIndex = 42;
             this.btnAdd.Text = "Add Job";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnClear
             // 
