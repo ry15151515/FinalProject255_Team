@@ -53,5 +53,16 @@ namespace FinalProject_Team
             login.ShowDialog();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are you sure you want to log out?", "Confirm Log Out", MessageBoxButtons.YesNo) == DialogResult.No)
+            {
+                return;
+            }
+            Form login = new LoginForm();
+            login.ShowDialog();
+            
+        }
+
     }
 }
