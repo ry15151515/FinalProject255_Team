@@ -44,12 +44,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddJob.cs">
+    <Compile Include="..\..\..\..\..\..\..\Z-Purdue\255\AddJob\AddJob.cs">
       <SubType>Form</SubType>
+      <Link>AddJob.cs</Link>
     </Compile>
-    <Compile Include="AddJob.Designer.cs">
+    <Compile Include="..\..\..\..\..\..\..\Z-Purdue\255\AddJob\AddJob.Designer.cs">
       <DependentUpon>AddJob.cs</DependentUpon>
+      <Link>AddJob.Designer.cs</Link>
     </Compile>
+    <Compile Include="Class1.cs" />
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,8 +97,9 @@
     <Compile Include="StudentLogin.Designer.cs">
       <DependentUpon>StudentLogin.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AddJob.resx">
+    <EmbeddedResource Include="..\..\..\..\..\..\..\Z-Purdue\255\AddJob\AddJob.resx">
       <DependentUpon>AddJob.cs</DependentUpon>
+      <Link>AddJob.resx</Link>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
@@ -138,7 +142,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="..\..\..\..\..\..\..\Z-Purdue\255\teamstuf\App.config">
+      <Link>App.config</Link>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

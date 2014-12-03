@@ -195,7 +195,6 @@
             // 
             this.txtStudentName.Location = new System.Drawing.Point(97, 12);
             this.txtStudentName.Name = "txtStudentName";
-            this.txtStudentName.ReadOnly = true;
             this.txtStudentName.Size = new System.Drawing.Size(148, 20);
             this.txtStudentName.TabIndex = 40;
             // 
@@ -216,6 +215,7 @@
             this.btnAdd.TabIndex = 42;
             this.btnAdd.Text = "Add Job";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnClear
             // 
@@ -225,6 +225,7 @@
             this.btnClear.TabIndex = 43;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // label2
             // 
