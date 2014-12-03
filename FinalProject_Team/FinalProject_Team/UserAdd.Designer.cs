@@ -28,84 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-<<<<<<< HEAD
-            this.txtFName = new System.Windows.Forms.TextBox();
-            this.txtCollege = new System.Windows.Forms.TextBox();
-            this.txtLName = new System.Windows.Forms.TextBox();
-            this.txtMajor = new System.Windows.Forms.TextBox();
-            this.txtStatus = new System.Windows.Forms.TextBox();
-            this.txtInterest = new System.Windows.Forms.TextBox();
-=======
             this.txtfirstName = new System.Windows.Forms.TextBox();
             this.txtcollege = new System.Windows.Forms.TextBox();
             this.txtlastName = new System.Windows.Forms.TextBox();
             this.txtmajor = new System.Windows.Forms.TextBox();
             this.txtstatus = new System.Windows.Forms.TextBox();
             this.txtprimaryInterest = new System.Windows.Forms.TextBox();
->>>>>>> ryanchanges
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-<<<<<<< HEAD
-            this.rdoMale = new System.Windows.Forms.RadioButton();
-            this.rdoFemale = new System.Windows.Forms.RadioButton();
-            this.dtpBirthday = new System.Windows.Forms.DateTimePicker();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtPhone = new System.Windows.Forms.TextBox();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.lstOutput = new System.Windows.Forms.ListBox();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.SuspendLayout();
-            // 
-            // txtFName
-            // 
-            this.txtFName.Location = new System.Drawing.Point(75, 6);
-            this.txtFName.Name = "txtFName";
-            this.txtFName.Size = new System.Drawing.Size(100, 20);
-            this.txtFName.TabIndex = 0;
-            // 
-            // txtCollege
-            // 
-            this.txtCollege.Location = new System.Drawing.Point(75, 58);
-            this.txtCollege.Name = "txtCollege";
-            this.txtCollege.Size = new System.Drawing.Size(100, 20);
-            this.txtCollege.TabIndex = 0;
-            // 
-            // txtLName
-            // 
-            this.txtLName.Location = new System.Drawing.Point(75, 32);
-            this.txtLName.Name = "txtLName";
-            this.txtLName.Size = new System.Drawing.Size(100, 20);
-            this.txtLName.TabIndex = 0;
-            // 
-            // txtMajor
-            // 
-            this.txtMajor.Location = new System.Drawing.Point(75, 86);
-            this.txtMajor.Name = "txtMajor";
-            this.txtMajor.Size = new System.Drawing.Size(100, 20);
-            this.txtMajor.TabIndex = 0;
-            // 
-            // txtStatus
-            // 
-            this.txtStatus.Location = new System.Drawing.Point(277, 32);
-            this.txtStatus.Name = "txtStatus";
-            this.txtStatus.Size = new System.Drawing.Size(100, 20);
-            this.txtStatus.TabIndex = 0;
-            // 
-            // txtInterest
-            // 
-            this.txtInterest.Location = new System.Drawing.Point(277, 6);
-            this.txtInterest.Name = "txtInterest";
-            this.txtInterest.Size = new System.Drawing.Size(100, 20);
-            this.txtInterest.TabIndex = 0;
-=======
             this.rdbMale = new System.Windows.Forms.RadioButton();
             this.rdbFemale = new System.Windows.Forms.RadioButton();
             this.dateBirthdate = new System.Windows.Forms.DateTimePicker();
@@ -161,7 +94,6 @@
             this.txtprimaryInterest.Name = "txtprimaryInterest";
             this.txtprimaryInterest.Size = new System.Drawing.Size(100, 20);
             this.txtprimaryInterest.TabIndex = 5;
->>>>>>> ryanchanges
             // 
             // label1
             // 
@@ -217,36 +149,6 @@
             this.label6.TabIndex = 1;
             this.label6.Text = "Status";
             // 
-<<<<<<< HEAD
-            // rdoMale
-            // 
-            this.rdoMale.AutoSize = true;
-            this.rdoMale.Location = new System.Drawing.Point(488, 35);
-            this.rdoMale.Name = "rdoMale";
-            this.rdoMale.Size = new System.Drawing.Size(48, 17);
-            this.rdoMale.TabIndex = 2;
-            this.rdoMale.TabStop = true;
-            this.rdoMale.Text = "Male";
-            this.rdoMale.UseVisualStyleBackColor = true;
-            // 
-            // rdoFemale
-            // 
-            this.rdoFemale.AutoSize = true;
-            this.rdoFemale.Location = new System.Drawing.Point(488, 58);
-            this.rdoFemale.Name = "rdoFemale";
-            this.rdoFemale.Size = new System.Drawing.Size(59, 17);
-            this.rdoFemale.TabIndex = 2;
-            this.rdoFemale.TabStop = true;
-            this.rdoFemale.Text = "Female";
-            this.rdoFemale.UseVisualStyleBackColor = true;
-            // 
-            // dtpBirthday
-            // 
-            this.dtpBirthday.Location = new System.Drawing.Point(277, 58);
-            this.dtpBirthday.Name = "dtpBirthday";
-            this.dtpBirthday.Size = new System.Drawing.Size(200, 20);
-            this.dtpBirthday.TabIndex = 3;
-=======
             // rdbMale
             // 
             this.rdbMale.AutoSize = true;
@@ -280,7 +182,6 @@
             this.dateBirthdate.Size = new System.Drawing.Size(200, 20);
             this.dateBirthdate.TabIndex = 7;
             this.dateBirthdate.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
->>>>>>> ryanchanges
             // 
             // label7
             // 
@@ -290,23 +191,8 @@
             this.label7.Size = new System.Drawing.Size(49, 13);
             this.label7.TabIndex = 1;
             this.label7.Text = "Birthdate";
-            // 
-<<<<<<< HEAD
-            // txtPhone
-            // 
-            this.txtPhone.Location = new System.Drawing.Point(277, 84);
-            this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(100, 20);
-            this.txtPhone.TabIndex = 0;
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.Location = new System.Drawing.Point(447, 6);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(100, 20);
-            this.txtEmail.TabIndex = 0;
-=======
-            // txtphone
+            //
+			// txtphone
             // 
             this.txtphone.Location = new System.Drawing.Point(103, 231);
             this.txtphone.Name = "txtphone";
@@ -319,7 +205,6 @@
             this.txtemail.Name = "txtemail";
             this.txtemail.Size = new System.Drawing.Size(100, 20);
             this.txtemail.TabIndex = 9;
->>>>>>> ryanchanges
             // 
             // label8
             // 
@@ -414,16 +299,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-<<<<<<< HEAD
-            this.ClientSize = new System.Drawing.Size(816, 413);
-            this.Controls.Add(this.btnDelete);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.lstOutput);
-            this.Controls.Add(this.dtpBirthday);
-            this.Controls.Add(this.rdoFemale);
-            this.Controls.Add(this.rdoMale);
-=======
             this.ClientSize = new System.Drawing.Size(369, 327);
             this.Controls.Add(this.txtbirthdate);
             this.Controls.Add(this.btnReturn);
@@ -431,7 +306,6 @@
             this.Controls.Add(this.dateBirthdate);
             this.Controls.Add(this.rdbFemale);
             this.Controls.Add(this.rdbMale);
->>>>>>> ryanchanges
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -441,16 +315,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-<<<<<<< HEAD
-            this.Controls.Add(this.txtInterest);
-            this.Controls.Add(this.txtLName);
-            this.Controls.Add(this.txtStatus);
-            this.Controls.Add(this.txtEmail);
-            this.Controls.Add(this.txtPhone);
-            this.Controls.Add(this.txtMajor);
-            this.Controls.Add(this.txtCollege);
-            this.Controls.Add(this.txtFName);
-=======
             this.Controls.Add(this.txtprimaryInterest);
             this.Controls.Add(this.txtlastName);
             this.Controls.Add(this.txtstatus);
@@ -459,7 +323,6 @@
             this.Controls.Add(this.txtmajor);
             this.Controls.Add(this.txtcollege);
             this.Controls.Add(this.txtfirstName);
->>>>>>> ryanchanges
             this.Name = "UserAdd";
             this.Text = "UserAdd";
             this.ResumeLayout(false);
@@ -469,41 +332,18 @@
 
         #endregion
 
-<<<<<<< HEAD
-        private System.Windows.Forms.TextBox txtFName;
-        private System.Windows.Forms.TextBox txtCollege;
-        private System.Windows.Forms.TextBox txtLName;
-        private System.Windows.Forms.TextBox txtMajor;
-        private System.Windows.Forms.TextBox txtStatus;
-        private System.Windows.Forms.TextBox txtInterest;
-=======
         private System.Windows.Forms.TextBox txtfirstName;
         private System.Windows.Forms.TextBox txtcollege;
         private System.Windows.Forms.TextBox txtlastName;
         private System.Windows.Forms.TextBox txtmajor;
         private System.Windows.Forms.TextBox txtstatus;
         private System.Windows.Forms.TextBox txtprimaryInterest;
->>>>>>> ryanchanges
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-<<<<<<< HEAD
-        private System.Windows.Forms.RadioButton rdoMale;
-        private System.Windows.Forms.RadioButton rdoFemale;
-        private System.Windows.Forms.DateTimePicker dtpBirthday;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtPhone;
-        private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ListBox lstOutput;
-        private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button btnDelete;
-=======
         private System.Windows.Forms.RadioButton rdbMale;
         private System.Windows.Forms.RadioButton rdbFemale;
         private System.Windows.Forms.DateTimePicker dateBirthdate;
@@ -515,6 +355,5 @@
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnReturn;
         private System.Windows.Forms.TextBox txtbirthdate;
->>>>>>> ryanchanges
     }
 }
