@@ -82,7 +82,7 @@ namespace FinalProject_Team
                 return;
             }
             mAddJob.Add(txtStudentName.Text);
-            mAddJob.Add(dateTimePicker1);
+            mAddJob.Add(dtpDate.Value);
             mAddJob.Add(txtJobName.Text);
             mAddJob.Add(txtJobSource.Text);
             mAddJob.Add(txtWeight.Text);
