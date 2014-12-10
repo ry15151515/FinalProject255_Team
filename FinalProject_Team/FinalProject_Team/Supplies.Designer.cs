@@ -28,27 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.lstOutput = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.txtSize = new System.Windows.Forms.TextBox();
+            this.txtColor = new System.Windows.Forms.TextBox();
+            this.txtPrice = new System.Windows.Forms.TextBox();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.dtpDate = new System.Windows.Forms.DateTimePicker();
+            this.btnDB = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // listBox1
+            // lstOutput
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(12, 94);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(429, 225);
-            this.listBox1.TabIndex = 0;
+            this.lstOutput.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lstOutput.FormattingEnabled = true;
+            this.lstOutput.Location = new System.Drawing.Point(12, 94);
+            this.lstOutput.Name = "lstOutput";
+            this.lstOutput.Size = new System.Drawing.Size(429, 225);
+            this.lstOutput.TabIndex = 0;
+            this.lstOutput.SelectedIndexChanged += new System.EventHandler(this.lstOutput_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -77,87 +79,91 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Price";
             // 
-            // textBox1
+            // txtSize
             // 
-            this.textBox1.Location = new System.Drawing.Point(88, 10);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 3;
+            this.txtSize.Location = new System.Drawing.Point(88, 10);
+            this.txtSize.Name = "txtSize";
+            this.txtSize.Size = new System.Drawing.Size(100, 20);
+            this.txtSize.TabIndex = 3;
             // 
-            // textBox2
+            // txtColor
             // 
-            this.textBox2.Location = new System.Drawing.Point(88, 36);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 3;
+            this.txtColor.Location = new System.Drawing.Point(88, 36);
+            this.txtColor.Name = "txtColor";
+            this.txtColor.Size = new System.Drawing.Size(100, 20);
+            this.txtColor.TabIndex = 3;
             // 
-            // textBox3
+            // txtPrice
             // 
-            this.textBox3.Location = new System.Drawing.Point(88, 62);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 3;
+            this.txtPrice.Location = new System.Drawing.Point(88, 62);
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.Size = new System.Drawing.Size(100, 20);
+            this.txtPrice.TabIndex = 3;
             // 
-            // button1
+            // btnAdd
             // 
-            this.button1.Location = new System.Drawing.Point(224, 8);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(104, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Add Spool";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAdd.Location = new System.Drawing.Point(334, 7);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(104, 23);
+            this.btnAdd.TabIndex = 4;
+            this.btnAdd.Text = "Add Spool";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // button2
+            // btnDelete
             // 
-            this.button2.Location = new System.Drawing.Point(334, 8);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(104, 23);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Remove Spool";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnDelete.Location = new System.Drawing.Point(334, 36);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(104, 23);
+            this.btnDelete.TabIndex = 5;
+            this.btnDelete.Text = "Remove Spool";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
-            // button3
+            // btnUpdate
             // 
-            this.button3.Location = new System.Drawing.Point(224, 37);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(104, 23);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "Delete Spool";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnUpdate.Location = new System.Drawing.Point(224, 36);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(104, 23);
+            this.btnUpdate.TabIndex = 7;
+            this.btnUpdate.Text = "Update Spool";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
-            // button4
+            // dtpDate
             // 
-            this.button4.Location = new System.Drawing.Point(334, 37);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(104, 23);
-            this.button4.TabIndex = 7;
-            this.button4.Text = "Update Spool";
-            this.button4.UseVisualStyleBackColor = true;
+            this.dtpDate.Location = new System.Drawing.Point(224, 68);
+            this.dtpDate.Name = "dtpDate";
+            this.dtpDate.Size = new System.Drawing.Size(200, 20);
+            this.dtpDate.TabIndex = 8;
             // 
-            // dateTimePicker1
+            // btnDB
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(224, 68);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 8;
+            this.btnDB.Location = new System.Drawing.Point(224, 7);
+            this.btnDB.Name = "btnDB";
+            this.btnDB.Size = new System.Drawing.Size(104, 23);
+            this.btnDB.TabIndex = 4;
+            this.btnDB.Text = "DB Connect";
+            this.btnDB.UseVisualStyleBackColor = true;
+            this.btnDB.Click += new System.EventHandler(this.btnDB_Click);
             // 
             // Supplies
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(453, 331);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.dtpDate);
+            this.Controls.Add(this.btnUpdate);
+            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.btnDB);
+            this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.txtPrice);
+            this.Controls.Add(this.txtColor);
+            this.Controls.Add(this.txtSize);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.lstOutput);
             this.Name = "Supplies";
             this.Text = "Supplies";
             this.ResumeLayout(false);
@@ -167,17 +173,17 @@
 
         #endregion
 
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox lstOutput;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.TextBox txtSize;
+        private System.Windows.Forms.TextBox txtColor;
+        private System.Windows.Forms.TextBox txtPrice;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.DateTimePicker dtpDate;
+        private System.Windows.Forms.Button btnDB;
     }
 }

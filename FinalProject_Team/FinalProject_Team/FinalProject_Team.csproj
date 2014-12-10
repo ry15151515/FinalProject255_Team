@@ -33,6 +33,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -50,6 +51,7 @@
     <Compile Include="AddJob.Designer.cs">
       <DependentUpon>AddJob.cs</DependentUpon>
     </Compile>
+    <Compile Include="clsSupply.cs" />
     <Compile Include="clsUser.cs" />
     <Compile Include="clsComboBoxItem.cs" />
     <Compile Include="clsMaintenance.cs" />
@@ -144,7 +146,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-	<None Include="App.config" />
+    <None Include="App.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
