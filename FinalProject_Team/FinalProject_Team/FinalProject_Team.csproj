@@ -51,11 +51,12 @@
     <Compile Include="AddJob.Designer.cs">
       <DependentUpon>AddJob.cs</DependentUpon>
     </Compile>
+    <Compile Include="clsSQL.cs" />
     <Compile Include="clsSupply.cs" />
-    <Compile Include="clsUser.cs" />
     <Compile Include="clsComboBoxItem.cs" />
     <Compile Include="clsMaintenance.cs" />
     <Compile Include="Class1.cs" />
+    <Compile Include="clsUser.cs" />
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
